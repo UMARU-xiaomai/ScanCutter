@@ -6,6 +6,7 @@ struct DocumentEditView: View {
     @State private var showCopyAlert = false
     @State private var copiedImageIndex: Int?
     @State private var showClearAlert = false
+    @State private var shareImage: UIImage?
     
     
     private let columns = [
@@ -45,6 +46,9 @@ struct DocumentEditView: View {
                         copiedImageIndex = index
                         showCopyAlert = true
                     }
+                    .onLongPressGesture {
+                        shareImage = images[index]
+                    }
                 }
             }
             .padding()
@@ -74,6 +78,9 @@ struct DocumentEditView: View {
             if let index = copiedImageIndex {
                 Text("第 \(index + 1) 张图片已复制")
             }
+        }
+        .sheet(item: $shareImage) { image in
+            ShareSheet(activityItems: [image])
         }
     }
 }
