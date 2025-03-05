@@ -8,17 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		BDD0EDCF2D5CF62B005106AC /* ScanCutterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0EDCE2D5CF62B005106AC /* ScanCutterApp.swift */; };
-		BDD0EDD12D5CF62B005106AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0EDD02D5CF62B005106AC /* ContentView.swift */; };
 		BDD0EDD32D5CF62E005106AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD0EDD22D5CF62E005106AC /* Assets.xcassets */; };
 		BDD0EDD62D5CF62E005106AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD0EDD52D5CF62E005106AC /* Preview Assets.xcassets */; };
+		BDD0EDE02D5CF807005106AC /* DocumentEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0EDDD2D5CF807005106AC /* DocumentEditView.swift */; };
+		BDD0EDE12D5CF807005106AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0EDDE2D5CF807005106AC /* ContentView.swift */; };
+		BDD0EDE22D5CF807005106AC /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0EDDF2D5CF807005106AC /* ShareSheet.swift */; };
+		BDD0EDE52D5CF828005106AC /* ScannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0EDE42D5CF828005106AC /* ScannerModel.swift */; };
+		BDD0EDEF2D5CFF06005106AC /* FilteredImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0EDEE2D5CFF05005106AC /* FilteredImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BDD0EDCB2D5CF62B005106AC /* ScanCutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScanCutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD0EDCE2D5CF62B005106AC /* ScanCutterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCutterApp.swift; sourceTree = "<group>"; };
-		BDD0EDD02D5CF62B005106AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BDD0EDD22D5CF62E005106AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDD0EDD52D5CF62E005106AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BDD0EDDD2D5CF807005106AC /* DocumentEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentEditView.swift; sourceTree = "<group>"; };
+		BDD0EDDE2D5CF807005106AC /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BDD0EDDF2D5CF807005106AC /* ShareSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		BDD0EDE42D5CF828005106AC /* ScannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerModel.swift; sourceTree = "<group>"; };
+		BDD0EDE82D5CF9D4005106AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDD0EDEE2D5CFF05005106AC /* FilteredImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +60,10 @@
 		BDD0EDCD2D5CF62B005106AC /* ScanCutter */ = {
 			isa = PBXGroup;
 			children = (
+				BDD0EDE82D5CF9D4005106AC /* Info.plist */,
+				BDD0EDE32D5CF828005106AC /* Models */,
 				BDD0EDCE2D5CF62B005106AC /* ScanCutterApp.swift */,
-				BDD0EDD02D5CF62B005106AC /* ContentView.swift */,
+				BDD0EDDC2D5CF807005106AC /* Views */,
 				BDD0EDD22D5CF62E005106AC /* Assets.xcassets */,
 				BDD0EDD42D5CF62E005106AC /* Preview Content */,
 			);
@@ -66,6 +77,26 @@
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
+		};
+		BDD0EDDC2D5CF807005106AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BDD0EDDD2D5CF807005106AC /* DocumentEditView.swift */,
+				BDD0EDDE2D5CF807005106AC /* ContentView.swift */,
+				BDD0EDEE2D5CFF05005106AC /* FilteredImage.swift */,
+				BDD0EDDF2D5CF807005106AC /* ShareSheet.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BDD0EDE32D5CF828005106AC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BDD0EDE42D5CF828005106AC /* ScannerModel.swift */,
+			);
+			name = Models;
+			path = ScanCutter/Models;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -137,8 +168,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDD0EDD12D5CF62B005106AC /* ContentView.swift in Sources */,
+				BDD0EDEF2D5CFF06005106AC /* FilteredImage.swift in Sources */,
+				BDD0EDE22D5CF807005106AC /* ShareSheet.swift in Sources */,
+				BDD0EDE52D5CF828005106AC /* ScannerModel.swift in Sources */,
 				BDD0EDCF2D5CF62B005106AC /* ScanCutterApp.swift in Sources */,
+				BDD0EDE12D5CF807005106AC /* ContentView.swift in Sources */,
+				BDD0EDE02D5CF807005106AC /* DocumentEditView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +184,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -212,6 +248,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -274,7 +311,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ScanCutter/Preview Content\"";
 				DEVELOPMENT_TEAM = X47KHLA34N;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ScanCutter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -303,7 +341,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ScanCutter/Preview Content\"";
 				DEVELOPMENT_TEAM = X47KHLA34N;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ScanCutter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -332,7 +371,7 @@
 				BDD0EDD82D5CF62E005106AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		BDD0EDD92D5CF62E005106AC /* Build configuration list for PBXNativeTarget "ScanCutter" */ = {
 			isa = XCConfigurationList;
@@ -341,7 +380,7 @@
 				BDD0EDDB2D5CF62E005106AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
